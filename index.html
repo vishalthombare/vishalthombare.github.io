@@ -4,13 +4,28 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Vishal Thombare</title>
-  <meta name="description" content="Vishal Thombare — Angular-first Frontend Engineer. NestJS • Django REST Framework • FastAPI • Python • Postgres • Docker • Ubuntu VM" />
+  <meta name="description" content="Vishal Thombare" />
+
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Sora:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- Favicon & Social meta -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon.svg">
+  <meta name="theme-color" content="#dd0031">
+  <meta property="og:title" content="Vishal Thombare — Full-Stack Software Engineer">
+  <meta property="og:description" content="Angular-first frontend, full-stack delivery (NestJS, Django, FastAPI). Projects, experience and contact.">
+  <meta property="og:image" content="https://vishalthombare.github.io/images/og-preview.png">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Vishal Thombare — Full-Stack Software Engineer">
+  <meta name="twitter:description" content="Angular-first frontend, full-stack delivery (NestJS, Django, FastAPI).">
+  <meta name="twitter:image" content="https://vishalthombare.github.io/images/og-preview.png">
+
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Skip link -->
+  <!-- <a class="skip-link" href="#main-content">Skip to content</a> -->
 
   <header class="topbar" role="banner">
     <div class="container topbar-inner">
@@ -18,7 +33,7 @@
         <div class="logo" aria-hidden="true">VT</div>
         <div class="brand-text">
           <div class="brand-name">Vishal Thombare</div>
-          <div class="brand-sub">Full-Stack Software Engineer• Angular Specialist (NestJS, Python, React)</div>
+          <div class="brand-sub">Full-Stack Software Engineer • Angular Specialist (NestJS, Python, React)</div>
         </div>
       </a>
 
@@ -30,7 +45,7 @@
       </nav>
 
       <div class="controls">
-        <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle color theme" aria-pressed="false">🌙</button>
       </div>
     </div>
   </header>
@@ -66,16 +81,16 @@
         <h4>Quick Tech</h4>
         <div class="tech-grid" role="list">
           <span class="tech angular" role="listitem">Angular</span>
-          <span class="tech react" role="listitem">ReactJs</span>
+          <span class="tech react" role="listitem">React</span>
           <span class="tech ts" role="listitem">TypeScript</span>
           <span class="tech js" role="listitem">JavaScript</span>
           <span class="tech nest" role="listitem">NestJS</span>
-          <span class="tech drf" role="listitem">Django REST Framework</span>
+          <span class="tech drf" role="listitem">Django REST</span>
           <span class="tech fa" role="listitem">FastAPI</span>
           <span class="tech py" role="listitem">Python</span>
           <span class="tech db" role="listitem">Postgres</span>
           <span class="tech docker" role="listitem">Docker</span>
-          <span class="tech vm" role="listitem">Ubuntu (VM)</span>
+          <span class="tech vm" role="listitem">Ubuntu</span>
         </div>
       </div>
 
@@ -90,24 +105,49 @@
       <!-- HERO -->
       <div class="hero card">
         <div class="hero-left">
-          <p class="lead">I design and ship production-ready web applications — building scalable frontends primarily in Angular, also with React, resilient APIs using NestJS, Django, or FastAPI, managing deployments on Dockerized Ubuntu environments, and maintaining databases with PostgreSQL.</p>
+          <div class="hero-badge" aria-hidden="true">
+            <svg width="36" height="36" viewBox="0 0 256 256" aria-hidden="true"><defs><linearGradient id="gA" x1="0" x2="1"><stop offset="0" stop-color="#dd0031"/><stop offset="1" stop-color="#b30026"/></linearGradient></defs><path d="M128 12L20 48l28 142 80 34 80-34 28-142z" fill="url(#gA)"/></svg>
+            <span>Full-Stack</span>
+          </div>
+
+          <h2 class="hero-title">Engineering production-ready web applications — frontend to infrastructure.</h2>
+
+          <p class="lead">I design and ship production-ready web applications — building scalable frontends primarily in <strong>Angular</strong> (also React), resilient APIs using <strong>NestJS, Django, or FastAPI</strong>, managing <strong>PostgreSQL</strong> databases and deploying on <strong>Dockerized Ubuntu</strong> VMs.</p>
+
           <div class="hero-ctas">
             <a class="btn primary" href="#projects">View Projects</a>
             <a class="btn ghost" href="#tech">Tech & Infra</a>
           </div>
 
-          <div class="stats">
-            <div class="stat">
+          <div class="stats" role="list" aria-label="Key skills and experience">
+            <div class="stat" role="listitem">
               <div class="num">5+</div>
               <div class="label">Years Experience</div>
             </div>
-            <div class="stat">
+
+            <div class="stat" role="listitem">
               <div class="num">Angular</div>
               <div class="label">Primary Tech</div>
             </div>
-            <div class="stat">
-              <div class="num">Ubuntu</div>
-              <div class="label">Server/VM Setup</div>
+
+            <div class="stat" role="listitem">
+              <div class="num">React</div>
+              <div class="label">Secondary Frontend</div>
+            </div>
+
+            <div class="stat" role="listitem">
+              <div class="num">NestJS</div>
+              <div class="label">Backend Framework</div>
+            </div>
+
+            <div class="stat" role="listitem">
+              <div class="num">Python</div>
+              <div class="label">APIs & Scripting</div>
+            </div>
+
+            <div class="stat" role="listitem">
+              <div class="num">Postgres</div>
+              <div class="label">Database</div>
             </div>
           </div>
         </div>
@@ -119,7 +159,7 @@
         </div>
       </div>
 
-      <!-- START — REPLACED Projects (modern, equal-height cards) -->
+      <!-- Projects Section -->
       <article class="card projects-card" id="projects" aria-labelledby="projects-heading">
         <div class="projects-controls">
           <h3 id="projects-heading" class="section-title">Projects</h3>
@@ -128,12 +168,11 @@
             <div class="filters" role="toolbar" aria-label="Project filters">
               <button class="filter-btn active" data-filter="*">All</button>
               <button class="filter-btn" data-filter="angular">Angular</button>
-              <!-- <button class="filter-btn" data-filter="nestjs">NestJS</button> -->
               <button class="filter-btn" data-filter="python">Python</button>
               <button class="filter-btn" data-filter="devops">DevOps</button>
             </div>
 
-            <div class="search-compact" aria-hidden="false">
+            <div class="search-compact">
               <input id="projectSearch" type="search" placeholder="Search projects..." aria-label="Search projects">
             </div>
           </div>
@@ -142,79 +181,63 @@
         <div class="projects-grid" id="projectsGrid" role="list">
           <!-- Card 1 -->
           <article class="project-card" role="listitem" data-tags="angular,fullstack" aria-labelledby="p1-title">
-            <div class="proj-media" data-img="images/chat-800w.webp" role="img" aria-label="Screenshot: Real-time chat app UI">
-              <button class="proj-preview plain" data-src="images/chat-1200w.webp" aria-label="Open preview for Real-Time Chat App"></button>
-            </div>
+            <div class="proj-media" tabindex="0" data-img="images/chat-800w.webp" data-src="images/chat-1200w.webp" role="img" aria-label="Angular chat app preview"></div>
 
             <div class="p-body">
               <div class="p-head">
                 <h4 id="p1-title">Real-Time Chat App</h4>
-                <span class="tag">Angular • NestJS • Socket.IO</span>
+                <span class="tag">Angular • NestJS</span>
               </div>
 
-              <p class="muted">Component-driven Angular app with lazy modules + NestJS socket server. Chat requests, file uploads, presence & delivery receipts — frontend focused on UX and perf.</p>
+              <p class="muted">Component-driven Angular app with lazy modules + NestJS socket server. Chat requests, file uploads, presence & delivery receipts — frontend focused on UX and performance.</p>
 
               <div class="project-footer">
-                <div class="links">
-                  <a class="link" href="https://github.com/vishalthombare/chatapplications" target="_blank" rel="noopener">Repo ↗</a>
-                </div>
-                <!-- <div class="meta-actions">
-                  <a class="btn ghost small" href="#contact">Hire</a>
-                </div> -->
+                <a class="link" href="https://github.com/vishalthombare/chatapplications" target="_blank" rel="noopener">Repo ↗</a>
               </div>
             </div>
           </article>
 
           <!-- Card 2 -->
           <article class="project-card" role="listitem" data-tags="python,assistant" aria-labelledby="p2-title">
-            <div class="proj-media" data-img="images/speech-800w.webp" role="img" aria-label="Speech assistant UI screenshot">
-              <button class="proj-preview plain" data-src="images/speech-1200w.webp" aria-label="Open preview for Speech Recognition Assistant"></button>
-            </div>
+            <div class="proj-media" tabindex="0" data-img="images/speech-800w.webp" data-src="images/speech-1200w.webp" role="img" aria-label="Voice automation demo preview"></div>
 
             <div class="p-body">
               <div class="p-head">
                 <h4 id="p2-title">Speech Recognition Assistant</h4>
-                <span class="tag">Python • SpeechRecognition</span>
+                <span class="tag">Python • Automation</span>
               </div>
-              <p class="muted">Prototype that converts voice to commands and triggers automation — demo for accessibility & hands-free workflows.</p>
+              <p class="muted">Prototype that converts voice commands into actions and triggers automation — accessibility and hands-free workflow demo.</p>
 
               <div class="project-footer">
-                <div class="links"><a class="link" href="#">Repo ↗</a></div>
-                <!-- <div class="meta-actions">
-                  <a class="btn ghost small" href="#contact">Contact</a>
-                </div> -->
+                <a class="link" href="#" target="_blank" rel="noopener">Demo ↗</a>
               </div>
             </div>
           </article>
 
           <!-- Card 3 -->
-          <article class="project-card" role="listitem" data-tags="devops,backup" aria-labelledby="p3-title">
-            <div class="proj-media" data-img="images/backup-800w.webp" role="img" aria-label="Backup automation script screenshot">
-              <button class="proj-preview plain" data-src="images/backup-1200w.webp" aria-label="Open preview for DevOps Backup Automation"></button>
-            </div>
+          <article class="project-card" role="listitem" data-tags="devops,python" aria-labelledby="p3-title">
+            <div class="proj-media" tabindex="0" data-img="images/backup-800w.webp" data-src="images/backup-1200w.webp" role="img" aria-label="DevOps automation preview"></div>
 
             <div class="p-body">
               <div class="p-head">
                 <h4 id="p3-title">DevOps Backup Automation</h4>
-                <span class="tag">Python • Cron • Bash</span>
+                <span class="tag">Python • Bash</span>
               </div>
-              <p class="muted">Production backup scripts for Ubuntu VMs with rotation & logging; operational reliability and monitoring hooks.</p>
+              <p class="muted">Production-grade backup automation scripts for Ubuntu servers with rotation, logging, and monitoring integration hooks.</p>
 
               <div class="project-footer">
-                <div class="links"><a class="link" href="#">Repo ↗</a></div>
-                <!-- <div class="meta-actions"><a class="btn ghost small" href="#contact">Reach out</a></div> -->
+                <a class="link" href="#" target="_blank" rel="noopener">Docs ↗</a>
               </div>
             </div>
           </article>
         </div>
       </article>
-      <!-- END — Projects replacement -->
 
       <!-- Summary -->
       <article class="card summary" id="summary">
         <h3 class="section-title">Professional Summary</h3>
         <p>
-          Full-Stack Software Engineer with <strong>5+ years</strong> experience, specializing in Angular frontend engineering — component-driven architecture, NgRx/RxJS state management, accessibility, and performance optimization. Experienced in developing backend services with NestJS, Django REST Framework, and FastAPI, managing PostgreSQL databases, and deploying containerized applications using Docker on Ubuntu VMs with CI/CD workflows.
+          Full-Stack Software Engineer with over <strong>5 years</strong> of experience, specializing in <strong>Angular</strong> frontend engineering — component-driven architecture, NgRx/RxJS state management, accessibility, and performance optimization. Experienced in developing backend services with <strong>NestJS</strong>, <strong>Django REST Framework</strong>, and <strong>FastAPI</strong>, managing <strong>PostgreSQL</strong> databases, and deploying containerized applications using <strong>Docker</strong> on <strong>Ubuntu VMs</strong> with CI/CD workflows.
         </p>
       </article>
 
@@ -227,7 +250,6 @@
           <div class="muted">Aug 2023 – Present · Selangor, Malaysia</div>
           <ul class="dot-list short">
             <li>Led Angular frontend architecture for DMS: component library, lazy modules, and performance tuning.</li>
-            <li>Owned staging Ubuntu VMs and collaborated on NestJS API contracts and dockerized deployments.</li>
           </ul>
         </div>
 
@@ -305,11 +327,11 @@
 
   <footer class="footer">
     <div class="container">
-      <small>© <span id="year"></span> — Vishal Thombare • Angular-first Frontend Engineer & Full-Stack</small>
+      <small>© <span id="year"></span> — Vishal Thombare • Full-Stack Software Engineer</small>
     </div>
   </footer>
 
-  <!-- Lightbox modal for previews -->
+  <!-- Lightbox -->
   <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog" aria-label="Image preview">
     <button class="lightbox-close" aria-label="Close preview">&times;</button>
     <div class="lightbox-inner" role="document">
@@ -319,7 +341,7 @@
   </div>
 
   <script>
-    // Initial focus + year + reveal animations
+    // initial focus and year
     (function() {
       try {
         if (location.hash) history.replaceState(null, document.title, location.pathname + location.search);
@@ -328,17 +350,15 @@
       } catch(e){ window.scrollTo(0,0); }
       document.addEventListener('DOMContentLoaded', ()=> {
         document.getElementById('year').textContent = new Date().getFullYear();
-
-        // CSS reveal fallback if JS present (keeps original staged animation)
         document.querySelectorAll('.card, .hero, .project-card').forEach((el,i)=>{
           el.style.opacity = 0; el.style.transform = 'translateY(12px)';
           el.style.transition = 'opacity .44s cubic-bezier(.2,.9,.3,1), transform .44s cubic-bezier(.2,.9,.3,1)';
-          setTimeout(()=> { el.style.opacity = 1; el.style.transform = 'translateY(0)'; }, 120 + i*70);
+          setTimeout(()=> { el.style.opacity = 1; el.style.transform = 'translateY(0)'; }, 120 + i*60);
         });
       });
     })();
 
-    // Lightbox behavior for .proj-preview elements (preserves your previous logic)
+    // lightbox + keyboard activation
     (function(){
       const lightbox = document.getElementById('lightbox');
       const img = document.getElementById('lightbox-img');
@@ -362,23 +382,30 @@
       }
 
       document.addEventListener('click', e=>{
-        const btn = e.target.closest('.proj-preview');
-        if (btn) {
-          const src = btn.dataset.src || btn.getAttribute('data-src') || '';
-          const title = btn.closest('.project-card')?.querySelector('h4')?.textContent || '';
-          if (src) { open(src, title); }
+        const targetMedia = e.target.closest('.proj-media');
+        if (targetMedia) {
+          const src = targetMedia.dataset.src || targetMedia.dataset.img || '';
+          const title = targetMedia.closest('.project-card')?.querySelector('h4')?.textContent || '';
+          if (src) open(src, title);
         }
+      });
+
+      // keyboard: Enter opens preview when .proj-media focused
+      document.addEventListener('keydown', (e)=>{
+        if (e.key === 'Enter' && document.activeElement?.classList?.contains('proj-media')) {
+          const el = document.activeElement;
+          const src = el.dataset.src || el.dataset.img || '';
+          const title = el.closest('.project-card')?.querySelector('h4')?.textContent || '';
+          if (src) open(src, title);
+        }
+        if (e.key === 'Escape' && lightbox.classList.contains('open')) close();
       });
 
       closeBtn.addEventListener('click', close);
       lightbox.addEventListener('click', e => { if (e.target === lightbox) close(); });
-
-      document.addEventListener('keydown', (e)=>{
-        if (e.key === 'Escape' && lightbox.classList.contains('open')) close();
-      });
     })();
 
-    // Theme persistence
+    // theme persistence + aria-pressed
     (function(){
       const toggle = document.getElementById('themeToggle');
       const root = document.documentElement;
@@ -389,6 +416,7 @@
         else root.removeAttribute('data-theme');
         localStorage.setItem('vt-theme', theme);
         toggle.textContent = theme === 'dark' ? '☀️' : '🌙';
+        toggle.setAttribute('aria-pressed', theme === 'dark' ? 'true' : 'false');
       }
       apply(saved || (prefersDark ? 'dark' : 'light'));
       toggle.addEventListener('click', ()=>{
@@ -397,21 +425,17 @@
       });
     })();
 
-    // Projects: set background images + filter/search
+    // projects: set background images + filter/search
     (function(){
-      // set background images from data-img; lazy pre-load
       document.querySelectorAll('.proj-media').forEach(el=>{
-        const img = el.dataset.img;
+        const img = el.dataset.img || el.dataset.src || '';
         if(!img) return;
-        // apply low-res instantly if desired, here we set the final image after preload to avoid layout jump
         const preload = new Image();
         preload.src = img;
         preload.onload = ()=> el.style.backgroundImage = `url("${img}")`;
-        // fallback in case of cached image
         if (preload.complete) el.style.backgroundImage = `url("${img}")`;
       });
 
-      // simple filter + search
       const buttons = Array.from(document.querySelectorAll('.filter-btn'));
       const grid = document.getElementById('projectsGrid');
       const items = Array.from(grid.children);
