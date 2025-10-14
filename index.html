@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -9,24 +9,9 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Sora:wght@600;700&display=swap" rel="stylesheet">
 
-  <!-- Favicon & Social meta -->
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-  <link rel="apple-touch-icon" sizes="180x180" href="/favicon.svg">
-  <meta name="theme-color" content="#dd0031">
-  <meta property="og:title" content="Vishal Thombare — Full-Stack Software Engineer">
-  <meta property="og:description" content="Angular-first frontend, full-stack delivery (NestJS, Django, FastAPI). Projects, experience and contact.">
-  <meta property="og:image" content="https://vishalthombare.github.io/images/og-preview.png">
-  <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary_large_image"/>
-  <meta name="twitter:title" content="Vishal Thombare — Full-Stack Software Engineer">
-  <meta name="twitter:description" content="Angular-first frontend, full-stack delivery (NestJS, Django, FastAPI).">
-  <meta name="twitter:image" content="https://vishalthombare.github.io/images/og-preview.png">
-
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- <a class="skip-link" href="#main-content">Skip to content</a> -->
-
   <header class="topbar" role="banner">
     <div class="container topbar-inner">
       <a class="brand" href="#page-top" aria-label="Homepage — Vishal Thombare">
@@ -79,16 +64,19 @@
 
       <div class="section">
         <h4>Quick Tech</h4>
-        <div class="tech-grid" role="list">
-          <span class="tech angular" role="listitem">Angular</span>
-          <span class="tech react" role="listitem">React</span>
+
+        <!-- QUICK TECH: combined, unchanged colored badges.
+             Angular gets a small 'Primary' sublabel so hero mini-tech info is merged here. -->
+        <div class="tech-grid" role="list" aria-label="Quick Technologies">
+          <span class="tech angular" role="listitem">Angular <small class="tech-sublabel">Primary</small></span>
+          <span class="tech react" role="listitem">React <small class="tech-sublabel">Secondary</small></span>
           <span class="tech ts" role="listitem">TypeScript</span>
           <span class="tech js" role="listitem">JavaScript</span>
-          <span class="tech nest" role="listitem">NestJS</span>
+          <span class="tech nest" role="listitem">NestJS <small class="tech-sublabel">Backend</small></span>
           <span class="tech drf" role="listitem">Django REST</span>
           <span class="tech fa" role="listitem">FastAPI</span>
-          <span class="tech py" role="listitem">Python</span>
-          <span class="tech db" role="listitem">Postgres</span>
+          <span class="tech py" role="listitem">Python <small class="tech-sublabel">APIs</small></span>
+          <span class="tech db" role="listitem">Postgres <small class="tech-sublabel">DB</small></span>
           <span class="tech docker" role="listitem">Docker</span>
           <span class="tech vm" role="listitem">Ubuntu</span>
         </div>
@@ -119,36 +107,10 @@
             <a class="btn ghost" href="#tech">Tech & Infra</a>
           </div>
 
-          <div class="stats" role="list" aria-label="Key skills and experience">
-            <div class="stat" role="listitem">
-              <div class="num">5+</div>
-              <div class="label">Years Experience</div>
-            </div>
-
-            <div class="stat" role="listitem">
-              <div class="num">Angular</div>
-              <div class="label">Primary Tech</div>
-            </div>
-
-            <div class="stat" role="listitem">
-              <div class="num">React</div>
-              <div class="label">Secondary Frontend</div>
-            </div>
-
-            <div class="stat" role="listitem">
-              <div class="num">NestJS</div>
-              <div class="label">Backend Framework</div>
-            </div>
-
-            <div class="stat" role="listitem">
-              <div class="num">Python</div>
-              <div class="label">APIs & Scripting</div>
-            </div>
-
-            <div class="stat" role="listitem">
-              <div class="num">Postgres</div>
-              <div class="label">Database</div>
-            </div>
+          <!-- HERO COMPACT ROW: view buttons + 5+ stat (moved here) -->
+          <div class="hero-compact-row">
+            <!-- clickable 5+ stat (smooth-scroll to Experience). kept prominent and single -->
+            <a href="#experience" class="mini-stat" id="jump-exp" title="View experience">5+<span class="mini-stat-label">Years Experience</span></a>
           </div>
         </div>
 
@@ -159,7 +121,7 @@
         </div>
       </div>
 
-      <!-- Projects Section -->
+      <!-- Projects -->
       <article class="card projects-card" id="projects" aria-labelledby="projects-heading">
         <div class="projects-controls">
           <h3 id="projects-heading" class="section-title">Projects</h3>
@@ -209,7 +171,7 @@
               <p class="muted">Prototype that converts voice commands into actions and triggers automation — accessibility and hands-free workflow demo.</p>
 
               <div class="project-footer">
-                <a class="link" href="#" target="_blank" rel="noopener">Demo ↗</a>
+                <a class="link" href="#" target="_blank" rel="noopener">Repo ↗</a>
               </div>
             </div>
           </article>
@@ -226,7 +188,7 @@
               <p class="muted">Production-grade backup automation scripts for Ubuntu servers with rotation, logging, and monitoring integration hooks.</p>
 
               <div class="project-footer">
-                <a class="link" href="#" target="_blank" rel="noopener">Docs ↗</a>
+                <a class="link" href="#" target="_blank" rel="noopener">Repo ↗</a>
               </div>
             </div>
           </article>
@@ -341,7 +303,7 @@
   </div>
 
   <script>
-    // initial focus and year
+    // initial focus & reveal
     (function() {
       try {
         if (location.hash) history.replaceState(null, document.title, location.pathname + location.search);
@@ -390,7 +352,6 @@
         }
       });
 
-      // keyboard: Enter opens preview when .proj-media focused
       document.addEventListener('keydown', (e)=>{
         if (e.key === 'Enter' && document.activeElement?.classList?.contains('proj-media')) {
           const el = document.activeElement;
@@ -425,7 +386,7 @@
       });
     })();
 
-    // projects: set background images + filter/search
+    // projects: set background images + filter/search + smooth scroll for 5+ stat
     (function(){
       document.querySelectorAll('.proj-media').forEach(el=>{
         const img = el.dataset.img || el.dataset.src || '';
@@ -462,6 +423,17 @@
       search.addEventListener('input', ()=>{
         const active = document.querySelector('.filter-btn.active')?.dataset.filter || '*';
         applyFilter(active, search.value);
+      });
+
+      // smooth scroll when clicking the hero 5+ stat
+      document.querySelectorAll('a[href="#experience"]').forEach(a=>{
+        a.addEventListener('click', function(e){
+          if (e.ctrlKey || e.metaKey || e.button === 1) return;
+          e.preventDefault();
+          const target = document.getElementById('experience');
+          if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          history.replaceState(null, '', '#experience');
+        });
       });
     })();
   </script>
