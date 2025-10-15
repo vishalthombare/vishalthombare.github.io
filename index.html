@@ -1,441 +1,239 @@
-<!doctype html>
-<html lang="en" data-theme="">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Vishal Thombare</title>
-  <meta name="description" content="Vishal Thombare" />
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Sora:wght@600;700&display=swap" rel="stylesheet">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vishal Thombare | Full-Stack Software Engineer</title>
+  <meta name="description" content="Full-Stack Software Engineer portfolio - Vishal Thombare" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Sora:wght@600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="topbar" role="banner">
-    <div class="container topbar-inner">
-      <a class="brand" href="#page-top" aria-label="Homepage — Vishal Thombare">
+  <header role="banner">
+    <nav class="topbar-inner" aria-label="Primary Navigation">
+      <a href="#" class="brand">
         <div class="logo" aria-hidden="true">VT</div>
         <div class="brand-text">
-          <div class="brand-name">Vishal Thombare</div>
-          <div class="brand-sub">Full-Stack Software Engineer • Angular Specialist (NestJS, Python, React)</div>
+          <span class="brand-name">Vishal Thombare</span>
+          <span class="brand-sub">Full-Stack Software Engineer • Angular/NestJS Specialist</span>
         </div>
       </a>
-
-      <nav class="navlinks" role="navigation" aria-label="Main navigation">
-        <a class="nav-link" href="#projects">Projects</a>
-        <a class="nav-link" href="#experience">Experience</a>
-        <a class="nav-link" href="#tech">Tech</a>
-        <a class="cta" href="#contact">Contact</a>
+      <nav class="navlinks" role="navigation" aria-label="Primary">
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#tech">Tech</a>
+        <a href="#contact" class="cta">Contact</a>
       </nav>
-
-      <div class="controls">
-        <button id="themeToggle" class="theme-toggle" aria-label="Toggle color theme" aria-pressed="false">🌙</button>
-      </div>
-    </div>
+      <button id="themeToggle" class="theme-toggle" aria-label="Toggle Dark Mode" aria-pressed="false">🌙</button>
+    </nav>
   </header>
 
-  <main id="main-content" class="container main-grid" tabindex="-1" role="main" aria-label="Main content">
-    <!-- LEFT: Profile -->
-    <aside class="panel profile-panel" aria-label="Profile">
-      <div class="profile-top">
-        <div class="avatar" aria-hidden="true">VT</div>
-        <div class="meta">
-          <h1 class="fullname">Vishal Thombare</h1>
-          <p class="role-strong">Full-Stack Software Engineer</p>
-          <div class="chip" role="note">Malaysia · Valid Work Visa · Open to Relocate / Remote</div>
-        </div>
+  <main class="main-grid" role="main">
+    <!-- Sidebar Profile -->
+    <aside class="profile-panel" aria-label="Profile">
+      <img src="avatar.jpg" alt="Avatar of Vishal Thombare" class="avatar-img" />
+
+      <div class="profile-main">
+        <h1>Vishal Thombare</h1>
+        <div class="cool-exp-badge">5+ Years of Experience</div>
+        <p class="role-strong">Full-Stack Software Engineer</p>
+        <div class="chip status"><span>✓</span> Malaysia · Valid Work Visa · Open to Relocate / Remote</div>
       </div>
 
-      <div class="section">
+      <hr class="divider" />
+
+      <section class="section">
+        <h4>About Me</h4>
+        <p>
+          Welcome! Solution-driven engineer with a knack for scalable products, clean code, and modern architecture. I value collaboration, curiosity, and continuous growth.
+        </p>
+      </section>
+
+      <hr class="divider" />
+
+      <section class="section contact">
         <h4>Contact</h4>
-        <ul class="contact-list">
-          <li><strong>Email:</strong> <a href="mailto:vishalthombare383@gmail.com">vishalthombare383@gmail.com</a></li>
-          <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/vishalthombare/" target="_blank" rel="noopener">/in/vishalthombare</a></li>
-          <li><strong>GitHub:</strong> <a href="https://github.com/vishalthombare" target="_blank" rel="noopener">/vishalthombare</a></li>
+        <ul>
+          <li><span class="icon">📧</span> <a href="mailto:vishalthombare383@gmail.com">vishalthombare383@gmail.com</a></li>
+          <li><span class="icon">💼</span> <a href="https://linkedin.com/in/vishalthombare/" target="_blank">LinkedIn</a></li>
+          <li><span class="icon">🐙</span> <a href="https://github.com/vishalthombare" target="_blank">GitHub</a></li>
         </ul>
-        <a class="btn download" href="Vishal_Thombare_CV.pdf" download>Download CV</a>
-      </div>
+        <a href="Vishal_Thombare_CV.pdf" download class="btn download">Download CV</a>
+      </section>
 
-      <div class="section">
+      <hr class="divider" />
+
+      <section class="section">
         <h4>Primary Focus</h4>
-        <p class="muted">Component-driven Angular apps, frontend performance, UX, and shipping full-stack features end-to-end.</p>
-      </div>
+        <p>Designing performance-obsessed Angular apps, crafting great user experiences, and leading full-stack feature delivery.</p>
+      </section>
 
-      <div class="section">
-        <h4>Quick Tech</h4>
+      <hr class="divider" />
 
-        <!-- QUICK TECH: combined, unchanged colored badges.
-             Angular gets a small 'Primary' sublabel so hero mini-tech info is merged here. -->
-        <div class="tech-grid" role="list" aria-label="Quick Technologies">
-          <span class="tech angular" role="listitem">Angular <small class="tech-sublabel">Primary</small></span>
-          <span class="tech react" role="listitem">React <small class="tech-sublabel">Secondary</small></span>
-          <span class="tech ts" role="listitem">TypeScript</span>
-          <span class="tech js" role="listitem">JavaScript</span>
-          <span class="tech nest" role="listitem">NestJS <small class="tech-sublabel">Backend</small></span>
-          <span class="tech drf" role="listitem">Django REST</span>
-          <span class="tech fa" role="listitem">FastAPI</span>
-          <span class="tech py" role="listitem">Python <small class="tech-sublabel">APIs</small></span>
-          <span class="tech db" role="listitem">Postgres <small class="tech-sublabel">DB</small></span>
-          <span class="tech docker" role="listitem">Docker</span>
-          <span class="tech vm" role="listitem">Ubuntu</span>
+      <section class="section">
+        <h4>Tech Stack</h4>
+        <div class="tech-stack">
+          <span class="tech angular">Angular</span>
+          <span class="tech nestjs">NestJS</span>
+          <span class="tech react">React</span>
+          <span class="tech typescript">TypeScript</span>
+          <span class="tech python">Python</span>
+          <span class="tech postgres">Postgres</span>
+          <span class="tech docker">Docker</span>
+          <span class="tech fastapi">FastAPI</span>
+          <span class="tech ubuntu">Ubuntu</span>
+          <span class="tech drf">Django REST</span>
         </div>
-      </div>
+      </section>
 
-      <div class="section small">
-        <h4>Practices</h4>
-        <p class="muted">NgRx & RxJS patterns • Component libraries • CI/CD • Containerization • VAPT-aware secure dev</p>
-      </div>
+      <hr class="divider" />
+
+      <section class="section">
+        <h4>Daily Practices</h4>
+        <ul class="practice-list">
+          <li>NgRx & RxJS architecture</li>
+          <li>Building component libraries</li>
+          <li>Automated CI/CD pipelines</li>
+          <li>Containerized deployments</li>
+          <li>Security best practices (VAPT-aware)</li>
+        </ul>
+      </section>
+
+      <hr class="divider" />
+
+      <section class="section">
+        <h4>Core Values</h4>
+        <div class="soft-skills">
+          <span>Teamwork</span>
+          <span>Adaptability</span>
+          <span>Mentorship</span>
+          <span>Continuous Learning</span>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <section class="section">
+        <h4>Fun Fact</h4>
+        <p>Outdoor enthusiast, open-source contributor, espresso fan.</p>
+      </section>
+
+      <hr class="divider" />
+
+      <section class="section">
+        <h4>Currently Learning</h4>
+        <p>Microfrontends, Kubernetes, and cloud automation.</p>
+      </section>
     </aside>
 
-    <!-- RIGHT: Content -->
-    <section class="panel content-panel" aria-live="polite">
-      <!-- HERO -->
-      <div class="hero card">
-        <div class="hero-left">
-          <div class="hero-badge" aria-hidden="true">
-            <svg width="36" height="36" viewBox="0 0 256 256" aria-hidden="true"><defs><linearGradient id="gA" x1="0" x2="1"><stop offset="0" stop-color="#dd0031"/><stop offset="1" stop-color="#b30026"/></linearGradient></defs><path d="M128 12L20 48l28 142 80 34 80-34 28-142z" fill="url(#gA)"/></svg>
-            <span>Full-Stack</span>
-          </div>
-
-          <h2 class="hero-title">Engineering production-ready web applications — frontend to infrastructure.</h2>
-
-          <p class="lead">I design and ship production-ready web applications — building scalable frontends primarily in <strong>Angular</strong> (also React), resilient APIs using <strong>NestJS, Django, or FastAPI</strong>, managing <strong>PostgreSQL</strong> databases and deploying on <strong>Dockerized Ubuntu</strong> VMs.</p>
-
-          <div class="hero-ctas">
-            <a class="btn primary" href="#projects">View Projects</a>
-            <a class="btn ghost" href="#tech">Tech & Infra</a>
-          </div>
-
-          <!-- HERO COMPACT ROW: view buttons + 5+ stat (moved here) -->
-          <div class="hero-compact-row">
-            <!-- clickable 5+ stat (smooth-scroll to Experience). kept prominent and single -->
-            <a href="#experience" class="mini-stat" id="jump-exp" title="View experience">5+<span class="mini-stat-label">Years Experience</span></a>
-          </div>
+    <section class="content-panel">
+      <article class="hero" aria-label="Introduction">
+        <h2>Engineering production-ready applications — End-to-End.</h2>
+        <p class="lead">I design and build scalable apps in <strong>Angular</strong> and backend services with <strong>NestJS, Django REST, FastAPI</strong>, deployed on Docker & Ubuntu VMs.</p>
+        <div class="hero-ctas">
+          <a href="#projects" class="btn primary">View Projects</a>
+          <a href="#contact" class="btn ghost">Contact Me</a>
         </div>
+      </article>
 
-        <div class="hero-right" aria-hidden="true">
-          <pre class="code-sample" aria-hidden="true"><code>&lt;app-message thread="room-1"&gt;
-  &lt;app-chat-panel /&gt;
-&lt;/app-message&gt;</code></pre>
-        </div>
-      </div>
-
-      <!-- Projects -->
-      <article class="card projects-card" id="projects" aria-labelledby="projects-heading">
-        <div class="projects-controls">
-          <h3 id="projects-heading" class="section-title">Projects</h3>
-
-          <div class="controls-right">
-            <div class="filters" role="toolbar" aria-label="Project filters">
-              <button class="filter-btn active" data-filter="*">All</button>
-              <button class="filter-btn" data-filter="angular">Angular</button>
-              <button class="filter-btn" data-filter="python">Python</button>
-              <button class="filter-btn" data-filter="devops">DevOps</button>
+      <article id="experience" aria-labelledby="experience-heading">
+        <h3 id="experience-heading">Experience</h3>
+        <ul class="dot-list">
+          <li><strong>Senior Software Engineer</strong>, Simbiotik Technologies (Aug 2023–Present): Led Angular frontend, built component libraries, improved performance.</li>
+          <li><strong>Technical Team Lead</strong>, RhythmFlows Solutions (Dec 2021–Aug 2023): Integrated backend APIs, implemented CI/CD and cloud deployments.</li>
+          <li><strong>Software Engineer</strong>, Modez Tech Ingenious (Feb 2020–Jun 2021): Built responsive UI features, shipped in agile sprints.</li>
+        </ul>
+      </article>
+      
+      <article id="projects" aria-labelledby="projects-heading">
+        <h3 id="projects-heading">Projects</h3>
+        <div class="projects-grid">
+          <div class="project-card" tabindex="0">
+            <img src="images/chat-800w.webp" alt="Angular chat app preview" />
+            <div>
+              <h4>Real-Time Chat App <span class="tag angular">Angular • NestJS</span></h4>
+              <p>Component-driven Angular chat with socket.io, file uploads, robust UX and performance.</p>
+              <a href="https://github.com/vishalthombare/chatapplications" target="_blank" rel="noopener noreferrer" class="link" aria-label="GitHub repository for Real-Time Chat App">Repo ↗</a>
             </div>
-
-            <div class="search-compact">
-              <input id="projectSearch" type="search" placeholder="Search projects..." aria-label="Search projects">
+          </div>
+          <div class="project-card" tabindex="0">
+            <img src="images/speech-800w.webp" alt="Voice automation demo preview" />
+            <div>
+              <h4>Speech Assistant <span class="tag python">Python • Automation</span></h4>
+              <p>Voice command automation and accessibility integration for productivity.</p>
+            </div>
+          </div>
+          <div class="project-card" tabindex="0">
+            <img src="images/backup-800w.webp" alt="DevOps automation preview" />
+            <div>
+              <h4>DevOps Backup Automation <span class="tag python">Python • Bash</span></h4>
+              <p>Production scripts for Ubuntu server automation, rotation and monitoring.</p>
             </div>
           </div>
         </div>
-
-        <div class="projects-grid" id="projectsGrid" role="list">
-          <!-- Card 1 -->
-          <article class="project-card" role="listitem" data-tags="angular,fullstack" aria-labelledby="p1-title">
-            <div class="proj-media" tabindex="0" data-img="images/chat-800w.webp" data-src="images/chat-1200w.webp" role="img" aria-label="Angular chat app preview"></div>
-
-            <div class="p-body">
-              <div class="p-head">
-                <h4 id="p1-title">Real-Time Chat App</h4>
-                <span class="tag">Angular • NestJS</span>
-              </div>
-
-              <p class="muted">Component-driven Angular app with lazy modules + NestJS socket server. Chat requests, file uploads, presence & delivery receipts — frontend focused on UX and performance.</p>
-
-              <div class="project-footer">
-                <a class="link" href="https://github.com/vishalthombare/chatapplications" target="_blank" rel="noopener">Repo ↗</a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Card 2 -->
-          <article class="project-card" role="listitem" data-tags="python,assistant" aria-labelledby="p2-title">
-            <div class="proj-media" tabindex="0" data-img="images/speech-800w.webp" data-src="images/speech-1200w.webp" role="img" aria-label="Voice automation demo preview"></div>
-
-            <div class="p-body">
-              <div class="p-head">
-                <h4 id="p2-title">Speech Recognition Assistant</h4>
-                <span class="tag">Python • Automation</span>
-              </div>
-              <p class="muted">Prototype that converts voice commands into actions and triggers automation — accessibility and hands-free workflow demo.</p>
-
-              <div class="project-footer">
-                <a class="link" href="#" target="_blank" rel="noopener">Repo ↗</a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Card 3 -->
-          <article class="project-card" role="listitem" data-tags="devops,python" aria-labelledby="p3-title">
-            <div class="proj-media" tabindex="0" data-img="images/backup-800w.webp" data-src="images/backup-1200w.webp" role="img" aria-label="DevOps automation preview"></div>
-
-            <div class="p-body">
-              <div class="p-head">
-                <h4 id="p3-title">DevOps Backup Automation</h4>
-                <span class="tag">Python • Bash</span>
-              </div>
-              <p class="muted">Production-grade backup automation scripts for Ubuntu servers with rotation, logging, and monitoring integration hooks.</p>
-
-              <div class="project-footer">
-                <a class="link" href="#" target="_blank" rel="noopener">Repo ↗</a>
-              </div>
-            </div>
-          </article>
-        </div>
       </article>
 
-      <!-- Summary -->
-      <article class="card summary" id="summary">
-        <h3 class="section-title">Professional Summary</h3>
-        <p>
-          Full-Stack Software Engineer with over <strong>5 years</strong> of experience, specializing in <strong>Angular</strong> frontend engineering — component-driven architecture, NgRx/RxJS state management, accessibility, and performance optimization. Experienced in developing backend services with <strong>NestJS</strong>, <strong>Django REST Framework</strong>, and <strong>FastAPI</strong>, managing <strong>PostgreSQL</strong> databases, and deploying containerized applications using <strong>Docker</strong> on <strong>Ubuntu VMs</strong> with CI/CD workflows.
-        </p>
+      <article id="tech" aria-labelledby="tech-heading">
+        <h3 id="tech-heading">Technology & Infrastructure</h3>
+        <ul>
+          <li>Frontend: Angular, React, TypeScript, SCSS</li>
+          <li>Backend: NestJS, Django REST, FastAPI, Python</li>
+          <li>Database: PostgreSQL</li>
+          <li>DevOps & Infra: Docker, Jenkins, Kubernetes, Ubuntu VM, Nginx</li>
+          <li>Security & QA: JWT/OAuth2, VAPT-aware development, unit & integration tests</li>
+        </ul>
       </article>
 
-      <!-- Experience -->
-      <article class="card" id="experience">
-        <h3 class="section-title">Experience</h3>
-
-        <div class="role">
-          <h4>Senior Software Engineer — Simbiotik Technologies Sdn. Bhd.</h4>
-          <div class="muted">Aug 2023 – Present · Selangor, Malaysia</div>
-          <ul class="dot-list short">
-            <li>Led Angular frontend architecture for DMS: component library, lazy modules, and performance tuning.</li>
-          </ul>
-        </div>
-
-        <div class="role">
-          <h4>Technical Team Lead — RhythmFlows Solutions</h4>
-          <div class="muted">Dec 2021 – Aug 2023 · Pune, India</div>
-          <ul class="dot-list short">
-            <li>Front-end lead & backend integrator for payment products (NestJS / FastAPI / Django REST). Implemented CI/CD and production VM workflows.</li>
-          </ul>
-        </div>
-
-        <div class="role">
-          <h4>Software Engineer — Reconciliation Platform</h4>
-          <div class="muted">Jul 2021 – Dec 2021 · Pune, India</div>
-          <ul class="dot-list short">
-            <li>Developed reconciliation modules for large transaction volumes; optimized validation and batch processing.</li>
-          </ul>
-        </div>
-
-        <div class="role">
-          <h4>Software Engineer — Modez Tech Ingenious</h4>
-          <div class="muted">Feb 2020 – Jun 2021 · Pune, India</div>
-          <ul class="dot-list short">
-            <li>Built responsive frontends using React & Angular and shipped customer-facing features in Agile sprints.</li>
-          </ul>
-        </div>
+      <article id="education" aria-labelledby="education-heading">
+        <h3 id="education-heading">Education</h3>
+        <p>B.Sc. Computer Science — Savitribai Phule Pune University (2020)</p>
       </article>
 
-      <!-- Tech & Infra -->
-      <article class="card" id="tech">
-        <h3 class="section-title">Technology & Infrastructure</h3>
-        <div class="tech-list">
-          <div class="tech-row"><strong>Frontend:</strong> Angular, TypeScript, RxJS, NgRx, SCSS</div>
-          <div class="tech-row"><strong>Backend:</strong> NestJS, Django REST Framework, FastAPI, Python</div>
-          <div class="tech-row"><strong>Database:</strong> PostgreSQL</div>
-          <div class="tech-row"><strong>DevOps & Infra:</strong> Docker, Jenkins, Kubernetes, Ubuntu VM provisioning, Nginx, systemd</div>
-          <div class="tech-row"><strong>Security & QA:</strong> JWT/OAuth2, VAPT alignment, unit & integration testing</div>
-        </div>
-
-        <div class="infra-visual" aria-hidden="true">
-          <svg viewBox="0 0 800 120" preserveAspectRatio="xMidYMid meet" width="100%">
-            <defs><linearGradient id="g1" x1="0" x2="1"><stop offset="0" stop-color="#dd0031"/><stop offset="1" stop-color="#0b76c9"/></linearGradient></defs>
-            <rect x="10" y="20" width="170" height="60" rx="8" fill="url(#g1)" />
-            <text x="95" y="55" text-anchor="middle" font-size="14" fill="#fff">Angular (Frontend)</text>
-            <rect x="220" y="20" width="170" height="60" rx="8" fill="#1f2937" />
-            <text x="305" y="55" text-anchor="middle" font-size="14" fill="#fff">NestJS / Python (API)</text>
-            <rect x="430" y="20" width="170" height="60" rx="8" fill="#047857" />
-            <text x="515" y="55" text-anchor="middle" font-size="14" fill="#fff">Postgres (DB)</text>
-            <rect x="640" y="20" width="140" height="60" rx="8" fill="#0b5ea8" />
-            <text x="710" y="55" text-anchor="middle" font-size="14" fill="#fff">Ubuntu VM</text>
-            <path d="M180 50 H220" stroke="#0b76c9" stroke-width="3" stroke-linecap="round" />
-            <path d="M390 50 H430" stroke="#fff" stroke-width="3" stroke-linecap="round" />
-            <path d="M600 50 H640" stroke="#fff" stroke-width="3" stroke-linecap="round" />
-          </svg>
-        </div>
-      </article>
-
-      <!-- Education -->
-      <article class="card" id="education">
-        <h3 class="section-title">Education</h3>
-        <p><strong>B.Sc. Computer Science</strong> — Savitribai Phule Pune University (2020)</p>
-      </article>
-
-      <!-- Contact -->
-      <article class="card" id="contact">
-        <h3 class="section-title">Contact</h3>
-        <p class="muted">Available for frontend (Angular) and full-stack roles. I lead UI engineering and deliver backend & infrastructure to ship features reliably. Open to remote or relocation (Singapore, UAE, Europe).</p>
+      <article id="contact" aria-labelledby="contact-heading">
+        <h3 id="contact-heading">Contact</h3>
+        <p>Available for frontend (Angular) and full-stack roles. Open to remote or relocation opportunities.</p>
         <div class="contact-grid">
-          <a class="btn primary" href="mailto:vishalthombare383@gmail.com">Email</a>
-          <a class="btn ghost" href="https://www.linkedin.com/in/vishalthombare/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="mailto:vishalthombare383@gmail.com" class="btn primary" aria-label="Send email to Vishal Thombare">Email</a>
+          <a href="https://www.linkedin.com/in/vishalthombare/" target="_blank" rel="noopener noreferrer" class="btn ghost" aria-label="Visit Vishal Thombare LinkedIn profile">LinkedIn</a>
         </div>
       </article>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="container">
-      <small>© <span id="year"></span> — Vishal Thombare • Full-Stack Software Engineer</small>
-    </div>
+    <small>© <span id="year"></span> Vishal Thombare • Full-Stack Software Engineer</small>
   </footer>
 
-  <!-- Lightbox -->
-  <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog" aria-label="Image preview">
-    <button class="lightbox-close" aria-label="Close preview">&times;</button>
-    <div class="lightbox-inner" role="document">
-      <img id="lightbox-img" alt="Preview" decoding="async">
-      <p id="lightbox-caption" class="muted"></p>
-    </div>
-  </div>
-
   <script>
-    // initial focus & reveal
-    (function() {
-      try {
-        if (location.hash) history.replaceState(null, document.title, location.pathname + location.search);
-        window.scrollTo({ top: 0, left: 0 });
-        const el = document.getElementById('main-content'); if (el) el.focus({preventScroll:true});
-      } catch(e){ window.scrollTo(0,0); }
-      document.addEventListener('DOMContentLoaded', ()=> {
-        document.getElementById('year').textContent = new Date().getFullYear();
-        document.querySelectorAll('.card, .hero, .project-card').forEach((el,i)=>{
-          el.style.opacity = 0; el.style.transform = 'translateY(12px)';
-          el.style.transition = 'opacity .44s cubic-bezier(.2,.9,.3,1), transform .44s cubic-bezier(.2,.9,.3,1)';
-          setTimeout(()=> { el.style.opacity = 1; el.style.transform = 'translateY(0)'; }, 120 + i*60);
-        });
-      });
-    })();
+    const toggleBtn = document.getElementById('themeToggle');
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    let savedTheme = localStorage.getItem('portfolio-theme');
 
-    // lightbox + keyboard activation
-    (function(){
-      const lightbox = document.getElementById('lightbox');
-      const img = document.getElementById('lightbox-img');
-      const caption = document.getElementById('lightbox-caption');
-      const closeBtn = document.querySelector('.lightbox-close');
-
-      function open(src, title){
-        img.src = src;
-        img.alt = title || 'Project preview';
-        caption.textContent = title || '';
-        lightbox.setAttribute('aria-hidden', 'false');
-        lightbox.classList.add('open');
-        document.body.style.overflow = 'hidden';
-        closeBtn.focus();
+    function applyTheme(theme) {
+      if(theme === 'dark') {
+        document.body.classList.add('dark-mode');
+        toggleBtn.textContent = '☀️';
+        toggleBtn.setAttribute('aria-pressed', 'true');
+      } else {
+        document.body.classList.remove('dark-mode');
+        toggleBtn.textContent = '🌙';
+        toggleBtn.setAttribute('aria-pressed', 'false');
       }
+      localStorage.setItem('portfolio-theme', theme);
+    }
 
-      function close(){
-        lightbox.setAttribute('aria-hidden', 'true');
-        lightbox.classList.remove('open');
-        document.body.style.overflow = '';
-      }
+    if(savedTheme) {
+      applyTheme(savedTheme);
+    } else {
+      applyTheme(prefersDark ? 'dark' : 'light');
+    }
 
-      document.addEventListener('click', e=>{
-        const targetMedia = e.target.closest('.proj-media');
-        if (targetMedia) {
-          const src = targetMedia.dataset.src || targetMedia.dataset.img || '';
-          const title = targetMedia.closest('.project-card')?.querySelector('h4')?.textContent || '';
-          if (src) open(src, title);
-        }
-      });
+    toggleBtn.addEventListener('click', () => {
+      const isDark = document.body.classList.contains('dark-mode');
+      applyTheme(isDark ? 'light' : 'dark');
+    });
 
-      document.addEventListener('keydown', (e)=>{
-        if (e.key === 'Enter' && document.activeElement?.classList?.contains('proj-media')) {
-          const el = document.activeElement;
-          const src = el.dataset.src || el.dataset.img || '';
-          const title = el.closest('.project-card')?.querySelector('h4')?.textContent || '';
-          if (src) open(src, title);
-        }
-        if (e.key === 'Escape' && lightbox.classList.contains('open')) close();
-      });
-
-      closeBtn.addEventListener('click', close);
-      lightbox.addEventListener('click', e => { if (e.target === lightbox) close(); });
-    })();
-
-    // theme persistence + aria-pressed
-    (function(){
-      const toggle = document.getElementById('themeToggle');
-      const root = document.documentElement;
-      const saved = localStorage.getItem('vt-theme');
-      const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-      function apply(theme){
-        if(theme === 'dark') root.setAttribute('data-theme','dark');
-        else root.removeAttribute('data-theme');
-        localStorage.setItem('vt-theme', theme);
-        toggle.textContent = theme === 'dark' ? '☀️' : '🌙';
-        toggle.setAttribute('aria-pressed', theme === 'dark' ? 'true' : 'false');
-      }
-      apply(saved || (prefersDark ? 'dark' : 'light'));
-      toggle.addEventListener('click', ()=>{
-        const cur = root.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
-        apply(cur === 'dark' ? 'light' : 'dark');
-      });
-    })();
-
-    // projects: set background images + filter/search + smooth scroll for 5+ stat
-    (function(){
-      document.querySelectorAll('.proj-media').forEach(el=>{
-        const img = el.dataset.img || el.dataset.src || '';
-        if(!img) return;
-        const preload = new Image();
-        preload.src = img;
-        preload.onload = ()=> el.style.backgroundImage = `url("${img}")`;
-        if (preload.complete) el.style.backgroundImage = `url("${img}")`;
-      });
-
-      const buttons = Array.from(document.querySelectorAll('.filter-btn'));
-      const grid = document.getElementById('projectsGrid');
-      const items = Array.from(grid.children);
-      const search = document.getElementById('projectSearch');
-
-      function applyFilter(tag, query){
-        items.forEach(it=>{
-          const tags = (it.dataset.tags || '').split(',').map(s=>s.trim());
-          const matchesTag = tag === '*' ? true : tags.includes(tag);
-          const txt = it.textContent.toLowerCase();
-          const matchesQuery = !query || txt.indexOf(query.toLowerCase()) !== -1;
-          it.style.display = (matchesTag && matchesQuery) ? '' : 'none';
-        });
-      }
-
-      buttons.forEach(btn=>{
-        btn.addEventListener('click', ()=>{
-          buttons.forEach(b=>b.classList.remove('active'));
-          btn.classList.add('active');
-          applyFilter(btn.dataset.filter, search.value);
-        });
-      });
-
-      search.addEventListener('input', ()=>{
-        const active = document.querySelector('.filter-btn.active')?.dataset.filter || '*';
-        applyFilter(active, search.value);
-      });
-
-      // smooth scroll when clicking the hero 5+ stat
-      document.querySelectorAll('a[href="#experience"]').forEach(a=>{
-        a.addEventListener('click', function(e){
-          if (e.ctrlKey || e.metaKey || e.button === 1) return;
-          e.preventDefault();
-          const target = document.getElementById('experience');
-          if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          history.replaceState(null, '', '#experience');
-        });
-      });
-    })();
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
