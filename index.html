@@ -11,21 +11,30 @@
 <body>
   <header>
     <nav class="topbar-inner" aria-label="Primary Navigation">
-      <a href="#" class="brand">
+      <a href="#" class="brand" aria-label="Homepage - Vishal Thombare">
         <div class="logo" aria-hidden="true">VT</div>
         <div class="brand-text">
           <span class="brand-name">Vishal Thombare</span>
           <span class="brand-sub">Full-Stack Software Engineer • Angular/NestJS Specialist</span>
         </div>
       </a>
-      <button id="navToggle" class="nav-toggle" aria-label="Open Navigation">☰</button>
-      <nav class="navlinks" role="navigation" aria-label="Primary">
+      <!-- hamburger -->
+      <button id="navToggle" class="nav-toggle" aria-label="Open Navigation" aria-expanded="false">
+        ☰
+      </button>
+      <!-- primary nav (drawer on mobile) -->
+      <nav class="navlinks" role="navigation" aria-label="Primary Links">
         <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
         <a href="#tech">Tech</a>
         <a href="#contact" class="cta">Contact</a>
+        <!-- small helper row inside drawer for mobile: theme toggle appears here on small screens -->
+        <div class="mobile-controls mobile-only" role="group" aria-label="Mobile controls">
+          <button id="themeToggle" class="theme-toggle" aria-label="Toggle Dark Mode" aria-pressed="false">🌙</button>
+        </div>
       </nav>
-      <button id="themeToggle" class="theme-toggle" aria-label="Toggle Dark Mode" aria-pressed="false">🌙</button>
+      <!-- visible on desktop -->
+      <button id="themeToggleDesktop" class="theme-toggle desktop-only" aria-label="Toggle Dark Mode" aria-pressed="false">🌙</button>
     </nav>
   </header>
 
@@ -49,8 +58,8 @@
         <h4>Contact</h4>
         <ul>
           <li><span class="icon">📧</span> <a href="mailto:vishalthombare383@gmail.com">vishalthombare383@gmail.com</a></li>
-          <li><span class="icon">💼</span> <a href="https://linkedin.com/in/vishalthombare/" target="_blank">LinkedIn</a></li>
-          <li><span class="icon">🐙</span> <a href="https://github.com/vishalthombare" target="_blank">GitHub</a></li>
+          <li><span class="icon">💼</span> <a href="https://linkedin.com/in/vishalthombare/" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><span class="icon">🐙</span> <a href="https://github.com/vishalthombare" target="_blank" rel="noopener">GitHub</a></li>
         </ul>
         <a href="Vishal_Thombare_CV.pdf" download class="btn download">Download CV</a>
       </section>
@@ -118,27 +127,6 @@
         </div>
       </article>
 
-      <!-- Enhanced Experience Section -->
-      <!-- <article id="experience" aria-labelledby="experience-heading">
-        <h3 id="experience-heading">Experience</h3>
-        <div class="exp-list">
-          <div class="exp-card">
-            <div class="exp-role"><span class="exp-badge">Senior Software Engineer</span> <span class="exp-company">@ Simbiotik Technologies</span></div>
-            <div class="exp-date">Aug 2023–Present</div>
-            <div class="exp-desc">Led Angular frontend, built component libraries, improved performance.</div>
-          </div>
-          <div class="exp-card">
-            <div class="exp-role"><span class="exp-badge">Technical Team Lead</span> <span class="exp-company">@ RhythmFlows Solutions</span></div>
-            <div class="exp-date">Dec 2021–Aug 2023</div>
-            <div class="exp-desc">Integrated backend APIs, implemented CI/CD and cloud deployments.</div>
-          </div>
-          <div class="exp-card">
-            <div class="exp-role"><span class="exp-badge">Software Engineer</span> <span class="exp-company">@ Modez Tech Ingenious</span></div>
-            <div class="exp-date">Feb 2020–Jun 2021</div>
-            <div class="exp-desc">Built responsive UI features, shipped in agile sprints.</div>
-          </div>
-        </div>
-      </article> -->
       <article id="experience" aria-labelledby="experience-heading">
         <h3 id="experience-heading">Experience</h3>
         <div class="exp-list">
@@ -147,7 +135,7 @@
               <span class="exp-badge">Senior Software Engineer</span>
               <span class="exp-company">@ Simbiotik Technologies Sdn. Bhd.</span>
             </div>
-            <div class="exp-date">Aug 2023 – Present &middot; Malaysia</div>
+            <div class="exp-date">Aug 2023 – Present · Malaysia</div>
             <ul class="exp-bullets">
               <li>Developed robust, scalable frontend modules for automotive DMS platforms.</li>
               <li>Implemented Angular solutions with NgRx, delivering high-performance apps.</li>
@@ -159,7 +147,7 @@
               <span class="exp-badge">Technical Team Lead</span>
               <span class="exp-company">@ RhythmFlows Solutions Pvt. Ltd.</span>
             </div>
-            <div class="exp-date">Dec 2021 – Aug 2023 &middot; Pune, India</div>
+            <div class="exp-date">Dec 2021 – Aug 2023 · Pune, India</div>
             <ul class="exp-bullets">
               <li>Designed BBPS payment platforms, integrating scalable APIs with leading banks.</li>
               <li>Developed digital payment solutions for recharge, bill pay, and e-wallets.</li>
@@ -171,7 +159,7 @@
               <span class="exp-badge">Software Engineer</span>
               <span class="exp-company">@ Modez Tech Ingenious</span>
             </div>
-            <div class="exp-date">Feb 2020 – Jun 2021 &middot; Pune, India (Remote)</div>
+            <div class="exp-date">Feb 2020 – Jun 2021 · Pune, India (Remote)</div>
             <ul class="exp-bullets">
               <li>Built and shipped responsive UI features in React.js and Angular.</li>
               <li>Ensured product stability for automated reconciliation and reporting.</li>
@@ -240,45 +228,86 @@
   </footer>
 
   <script>
-    // Hamburger for mobile nav menu
+    // Header / nav JS (accessible, prevents body scroll while mobile menu open)
     document.addEventListener('DOMContentLoaded', function () {
       const navToggle = document.getElementById('navToggle');
       const navLinks = document.querySelector('.navlinks');
+      const body = document.body;
+
+      // There are two theme buttons: one inside drawer for mobile and one desktop-only.
+      const themeToggleDesktop = document.getElementById('themeToggleDesktop');
+      const themeToggleMobile = document.getElementById('themeToggle');
+
+      // make sure at least one theme toggle exists
+      const toggleBtn = themeToggleMobile || themeToggleDesktop;
+
+      // NAV toggle accessibility + body scroll lock
+      navToggle.setAttribute('aria-expanded', 'false');
       navToggle.addEventListener('click', function () {
-        navLinks.classList.toggle('open');
+        const opened = navLinks.classList.toggle('open');
+        navToggle.setAttribute('aria-expanded', opened ? 'true' : 'false');
+
+        if (opened) {
+          body.classList.add('menu-open');
+        } else {
+          body.classList.remove('menu-open');
+        }
       });
+
+      // close menu when any nav link clicked (mobile)
       navLinks.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => {
-          if (window.innerWidth < 880) navLinks.classList.remove('open');
+          if (window.innerWidth < 880) {
+            navLinks.classList.remove('open');
+            navToggle.setAttribute('aria-expanded', 'false');
+            body.classList.remove('menu-open');
+          }
         });
       });
-    });
 
-    const toggleBtn = document.getElementById('themeToggle');
-    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    let savedTheme = localStorage.getItem('portfolio-theme');
-    function applyTheme(theme) {
-      if(theme === 'dark') {
-        document.body.classList.add('dark-mode');
-        toggleBtn.textContent = '☀️';
-        toggleBtn.setAttribute('aria-pressed', 'true');
-      } else {
-        document.body.classList.remove('dark-mode');
-        toggleBtn.textContent = '🌙';
-        toggleBtn.setAttribute('aria-pressed', 'false');
+      // Theme logic (persisted)
+      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      let savedTheme = localStorage.getItem('portfolio-theme');
+
+      function applyTheme(theme) {
+        if (theme === 'dark') {
+          document.body.classList.add('dark-mode');
+          if (themeToggleDesktop) themeToggleDesktop.textContent = '☀️';
+          if (themeToggleMobile) themeToggleMobile.textContent = '☀️';
+          if (themeToggleDesktop) themeToggleDesktop.setAttribute('aria-pressed', 'true');
+          if (themeToggleMobile) themeToggleMobile.setAttribute('aria-pressed', 'true');
+        } else {
+          document.body.classList.remove('dark-mode');
+          if (themeToggleDesktop) themeToggleDesktop.textContent = '🌙';
+          if (themeToggleMobile) themeToggleMobile.textContent = '🌙';
+          if (themeToggleDesktop) themeToggleDesktop.setAttribute('aria-pressed', 'false');
+          if (themeToggleMobile) themeToggleMobile.setAttribute('aria-pressed', 'false');
+        }
+        localStorage.setItem('portfolio-theme', theme);
       }
-      localStorage.setItem('portfolio-theme', theme);
-    }
-    if(savedTheme) {
-      applyTheme(savedTheme);
-    } else {
-      applyTheme(prefersDark ? 'dark' : 'light');
-    }
-    toggleBtn.addEventListener('click', () => {
-      const isDark = document.body.classList.contains('dark-mode');
-      applyTheme(isDark ? 'light' : 'dark');
+
+      if (savedTheme) {
+        applyTheme(savedTheme);
+      } else {
+        applyTheme(prefersDark ? 'dark' : 'light');
+      }
+
+      if (themeToggleDesktop) {
+        themeToggleDesktop.addEventListener('click', () => {
+          const isDark = document.body.classList.contains('dark-mode');
+          applyTheme(isDark ? 'light' : 'dark');
+        });
+      }
+      if (themeToggleMobile) {
+        themeToggleMobile.addEventListener('click', () => {
+          const isDark = document.body.classList.contains('dark-mode');
+          applyTheme(isDark ? 'light' : 'dark');
+        });
+      }
+
+      // year
+      document.getElementById('year').textContent = new Date().getFullYear();
     });
-    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
