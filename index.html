@@ -37,12 +37,15 @@
       <!-- visible on desktop -->
       <button id="themeToggleDesktop" class="theme-toggle desktop-only" aria-label="Toggle Dark Mode" aria-pressed="false">🌙</button>
     </nav>
+    <div class="scroll-progress" aria-hidden="true">
+      <span id="scrollProgressBar" class="scroll-progress-bar"></span>
+    </div>
   </header>
   <div id="navBackdrop" class="nav-backdrop" hidden></div>
 
   <main class="main-grid">
     <!-- Sidebar Profile -->
-    <aside class="profile-panel" aria-label="Profile" data-reveal>
+    <aside class="profile-panel" aria-label="Profile" data-reveal data-glow>
       <img src="images/Image.png" alt="Avatar of Vishal Thombare" class="avatar-img" />
       <div class="profile-main">
         <h1>Vishal Thombare</h1>
@@ -121,7 +124,7 @@
     </aside>
 
     <section class="content-panel">
-      <article class="hero" data-reveal>
+      <article class="hero" data-reveal data-glow>
         <p class="hero-eyebrow">Angular Architecture • Secure Product Delivery • Fintech Systems</p>
         <h2>Building Secure, Scalable Enterprise Platforms for Banking, Fintech &amp; SaaS</h2>
         <div class="hero-copy">
@@ -165,7 +168,7 @@
       <article id="experience" aria-labelledby="experience-heading" data-reveal>
         <h3 id="experience-heading">Experience</h3>
         <div class="exp-list">
-          <div class="exp-card" data-reveal>
+          <div class="exp-card" data-reveal data-glow>
             <div class="exp-role">
               <span class="exp-badge">Senior Software Engineer</span>
               <span class="exp-company">@ Simbiotik Technologies Sdn. Bhd.</span>
@@ -177,7 +180,7 @@
               <li>Drove UI/UX improvements and app enhancements for better client outcomes.</li>
             </ul>
           </div>
-          <div class="exp-card" data-reveal>
+          <div class="exp-card" data-reveal data-glow>
             <div class="exp-role">
               <span class="exp-badge">Technical Team Lead</span>
               <span class="exp-company">@ RhythmFlows Solutions Pvt. Ltd.</span>
@@ -189,7 +192,7 @@
               <li>Managed CI/CD, compliance, and customer-centric enhancements across products.</li>
             </ul>
           </div>
-          <div class="exp-card" data-reveal>
+          <div class="exp-card" data-reveal data-glow>
             <div class="exp-role">
               <span class="exp-badge">Software Engineer</span>
               <span class="exp-company">@ Modez Tech Ingenious</span>
@@ -206,7 +209,7 @@
       <article id="projects" aria-labelledby="projects-heading" data-reveal>
         <h3 id="projects-heading">Projects</h3>
         <div class="projects-grid">
-          <div class="project-card" tabindex="0" data-reveal>
+          <div class="project-card" tabindex="0" data-reveal data-glow>
             <img src="images/chat-800w.webp" alt="Angular chat app preview" />
             <div>
               <div class="project-kicker">Featured Build</div>
@@ -219,7 +222,7 @@
               <a href="https://github.com/vishalthombare/chatapplications" target="_blank" rel="noopener noreferrer" class="link" aria-label="GitHub repository for Real-Time Chat App">Repo ↗</a>
             </div>
           </div>
-          <div class="project-card" tabindex="0" data-reveal>
+          <div class="project-card" tabindex="0" data-reveal data-glow>
             <img src="images/speech-800w.webp" alt="Voice automation demo preview" />
             <div>
               <div class="project-kicker">Automation</div>
@@ -231,7 +234,7 @@
               <p>Voice command automation and accessibility integration for productivity.</p>
             </div>
           </div>
-          <div class="project-card" tabindex="0" data-reveal>
+          <div class="project-card" tabindex="0" data-reveal data-glow>
             <img src="images/backup-800w.webp" alt="DevOps automation preview" />
             <div>
               <div class="project-kicker">Infrastructure</div>
@@ -299,7 +302,10 @@
       const navToggle = document.getElementById('navToggle');
       const navLinks = document.querySelector('.navlinks');
       const navBackdrop = document.getElementById('navBackdrop');
+      const scrollProgressBar = document.getElementById('scrollProgressBar');
       const body = document.body;
+      const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const finePointer = window.matchMedia('(pointer: fine)').matches;
 
       // There are two theme buttons: one inside drawer for mobile and one desktop-only.
       const themeToggleDesktop = document.getElementById('themeToggleDesktop');
@@ -363,11 +369,11 @@
         }
       });
 
-      // Theme logic (persisted)
-      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-      let savedTheme = localStorage.getItem('portfolio-theme');
+      // Theme logic: default to light mode unless the user explicitly toggles.
+      const themeStorageKey = 'portfolio-theme-preference';
+      let savedTheme = localStorage.getItem(themeStorageKey);
 
-      function applyTheme(theme) {
+      function applyTheme(theme, persist = true) {
         if (theme === 'dark') {
           document.body.classList.add('dark-mode');
           if (themeToggleDesktop) themeToggleDesktop.textContent = '☀️';
@@ -381,13 +387,15 @@
           if (themeToggleDesktop) themeToggleDesktop.setAttribute('aria-pressed', 'false');
           if (themeToggleMobile) themeToggleMobile.setAttribute('aria-pressed', 'false');
         }
-        localStorage.setItem('portfolio-theme', theme);
+        if (persist) {
+          localStorage.setItem(themeStorageKey, theme);
+        }
       }
 
-      if (savedTheme) {
-        applyTheme(savedTheme);
+      if (savedTheme === 'dark' || savedTheme === 'light') {
+        applyTheme(savedTheme, false);
       } else {
-        applyTheme(prefersDark ? 'dark' : 'light');
+        applyTheme('light', false);
       }
 
       if (themeToggleDesktop) {
@@ -403,8 +411,45 @@
         });
       }
 
+      function updateScrollProgress() {
+        if (!scrollProgressBar) {
+          return;
+        }
+
+        const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = scrollable > 0 ? Math.min(window.scrollY / scrollable, 1) : 0;
+        scrollProgressBar.style.transform = `scaleX(${progress})`;
+      }
+
+      window.addEventListener('scroll', updateScrollProgress, { passive: true });
+      window.addEventListener('resize', updateScrollProgress);
+      updateScrollProgress();
+
+      const glowItems = document.querySelectorAll('[data-glow]');
+
+      if (!reducedMotion && finePointer) {
+        glowItems.forEach((item) => {
+          const resetGlow = () => {
+            item.style.setProperty('--spot-x', '50%');
+            item.style.setProperty('--spot-y', '50%');
+          };
+
+          resetGlow();
+
+          item.addEventListener('pointermove', (event) => {
+            const rect = item.getBoundingClientRect();
+            const x = ((event.clientX - rect.left) / rect.width) * 100;
+            const y = ((event.clientY - rect.top) / rect.height) * 100;
+            item.style.setProperty('--spot-x', `${Math.max(0, Math.min(x, 100))}%`);
+            item.style.setProperty('--spot-y', `${Math.max(0, Math.min(y, 100))}%`);
+          });
+
+          item.addEventListener('pointerleave', resetGlow);
+          item.addEventListener('focusin', resetGlow);
+        });
+      }
+
       const revealItems = document.querySelectorAll('[data-reveal]');
-      const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
       if (!reducedMotion && 'IntersectionObserver' in window) {
         const revealObserver = new IntersectionObserver((entries, observer) => {
