@@ -3,10 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Vishal Thombare | Full-Stack Software Engineer</title>
-  <meta name="description" content="Full-Stack Software Engineer portfolio - Vishal Thombare" />
+  <title>Vishal Thombare | Angular &amp; Full-Stack Software Engineer</title>
+  <meta name="description" content="Portfolio of Vishal Thombare, an Angular and full-stack software engineer building scalable enterprise platforms for fintech, banking, and SaaS teams." />
+  <meta name="theme-color" content="#ff4d9d" />
+  <meta property="og:title" content="Vishal Thombare | Angular &amp; Full-Stack Software Engineer" />
+  <meta property="og:description" content="Angular, NestJS, and full-stack engineer delivering scalable products for fintech, banking, and enterprise platforms." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="images/Image.png" />
+  <meta property="og:image:alt" content="Portrait of Vishal Thombare" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Vishal Thombare | Angular &amp; Full-Stack Software Engineer" />
+  <meta name="twitter:description" content="Angular, NestJS, and full-stack engineer delivering scalable products for fintech, banking, and enterprise platforms." />
+  <meta name="twitter:image" content="images/Image.png" />
   <script>document.documentElement.classList.add('js');</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&amp;family=Sora:wght@600;700&amp;display=swap" rel="stylesheet" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="images/Image.png" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -19,22 +33,18 @@
           <span class="brand-sub">Full-Stack Software Engineer • Angular/NestJS Specialist</span>
         </div>
       </a>
-      <!-- hamburger -->
       <button id="navToggle" class="nav-toggle" aria-label="Open Navigation" aria-expanded="false">
         ☰
       </button>
-      <!-- primary nav (drawer on mobile) -->
       <nav class="navlinks" role="navigation" aria-label="Primary Links">
         <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
         <a href="#tech">Tech</a>
         <a href="#contact" class="cta">Contact</a>
-        <!-- small helper row inside drawer for mobile: theme toggle appears here on small screens -->
         <div class="mobile-controls mobile-only" role="group" aria-label="Mobile controls">
           <button id="themeToggle" class="theme-toggle" aria-label="Toggle Dark Mode" aria-pressed="false">🌙</button>
         </div>
       </nav>
-      <!-- visible on desktop -->
       <button id="themeToggleDesktop" class="theme-toggle desktop-only" aria-label="Toggle Dark Mode" aria-pressed="false">🌙</button>
     </nav>
     <div class="scroll-progress" aria-hidden="true">
@@ -44,7 +54,6 @@
   <div id="navBackdrop" class="nav-backdrop" hidden></div>
 
   <main class="main-grid">
-    <!-- Sidebar Profile -->
     <aside class="profile-panel" aria-label="Profile" data-reveal data-glow>
       <img src="images/Image.png" alt="Avatar of Vishal Thombare" class="avatar-img" />
       <div class="profile-main">
@@ -56,7 +65,6 @@
       <hr class="divider" />
       <section class="section">
         <h4>About Me</h4>
-        <!-- <p>Welcome! Solution-driven engineer with a knack for scalable products, clean code, and modern architecture. I value collaboration, curiosity, and continuous growth.</p> -->
         <p>Welcome! I’m a solution-driven engineer with a strong focus on building scalable, enterprise-grade products through clean code and modern architecture. I value collaboration, curiosity, and continuous improvement, and I enjoy solving complex problems that deliver real business impact.</p>
       </section>
       <hr class="divider" />
@@ -175,9 +183,9 @@
             </div>
             <div class="exp-date">Aug 2023 – Present · Malaysia</div>
             <ul class="exp-bullets">
-              <li>Developed robust, scalable frontend modules for automotive DMS platforms.</li>
-              <li>Implemented Angular solutions with NgRx, delivering high-performance apps.</li>
-              <li>Drove UI/UX improvements and app enhancements for better client outcomes.</li>
+              <li>Delivered Angular modules for automotive dealer management workflows with scalable state management and maintainable enterprise UI architecture.</li>
+              <li>Built NgRx-driven data flows and reusable UI patterns for complex, data-heavy screens with reliable production performance.</li>
+              <li>Partnered with product, QA, and stakeholders to refine workflows, improve UX consistency, and ship client-facing enhancements.</li>
             </ul>
           </div>
           <div class="exp-card" data-reveal data-glow>
@@ -187,9 +195,9 @@
             </div>
             <div class="exp-date">Dec 2021 – Aug 2023 · Pune, India</div>
             <ul class="exp-bullets">
-              <li>Designed BBPS payment platforms, integrating scalable APIs with leading banks.</li>
-              <li>Developed digital payment solutions for recharge, bill pay, and e-wallets.</li>
-              <li>Managed CI/CD, compliance, and customer-centric enhancements across products.</li>
+              <li>Led architecture and delivery of BBPS and digital payment products spanning bill pay, recharge, and wallet experiences.</li>
+              <li>Designed secure bank and payment service integrations with scalable APIs, operational visibility, and regulated-environment reliability.</li>
+              <li>Owned release planning, CI/CD, and engineering direction for customer-facing fintech platforms while guiding delivery quality.</li>
             </ul>
           </div>
           <div class="exp-card" data-reveal data-glow>
@@ -199,8 +207,9 @@
             </div>
             <div class="exp-date">Feb 2020 – Jun 2021 · Pune, India</div>
             <ul class="exp-bullets">
-              <li>Built and shipped responsive UI features in React.js and Angular.</li>
-              <li>Ensured product stability for automated reconciliation and reporting.</li>
+              <li>Shipped Angular and React features for reconciliation and reporting products used in business-critical financial workflows.</li>
+              <li>Developed reusable frontend modules and API-connected UI components that improved maintainability and delivery speed.</li>
+              <li>Supported production stability through defect resolution, release hardening, and close collaboration with QA and product teams.</li>
             </ul>
           </div>
         </div>
@@ -218,8 +227,11 @@
                 <span class="tag angular">Angular</span>
                 <span class="tag nestjs">NestJS</span>
               </div>
-              <p>Component-driven Angular chat with socket.io, file uploads, robust UX, and strong real-time performance.</p>
-              <a href="https://github.com/vishalthombare/chatapplications" target="_blank" rel="noopener noreferrer" class="link" aria-label="GitHub repository for Real-Time Chat App">Repo ↗</a>
+              <p>Real-time messaging app with Socket.IO, file uploads, reusable Angular components, and a responsive UX built for dependable event handling.</p>
+              <div class="project-links">
+                <a href="https://github.com/vishalthombare/chatapplications" target="_blank" rel="noopener noreferrer" class="link" aria-label="GitHub repository for Real-Time Chat App">Repo ↗</a>
+                <a href="mailto:vishalthombare383@gmail.com?subject=Real-Time%20Chat%20App%20Discussion" class="link secondary" aria-label="Email Vishal about the Real-Time Chat App">Discuss ↗</a>
+              </div>
             </div>
           </div>
           <div class="project-card" tabindex="0" data-reveal data-glow>
@@ -231,7 +243,11 @@
                 <span class="tag python">Python</span>
                 <span class="tag automation">Automation</span>
               </div>
-              <p>Voice command automation and accessibility integration for productivity.</p>
+              <p>Voice-driven automation tool for launching tasks, improving desktop accessibility, and reducing repetitive manual workflows.</p>
+              <div class="project-links">
+                <a href="mailto:vishalthombare383@gmail.com?subject=Speech%20Assistant%20Walkthrough" class="link" aria-label="Email Vishal for a walkthrough of the Speech Assistant project">Walkthrough ↗</a>
+                <a href="https://github.com/vishalthombare" target="_blank" rel="noopener noreferrer" class="link secondary" aria-label="Visit Vishal Thombare GitHub profile">Profile ↗</a>
+              </div>
             </div>
           </div>
           <div class="project-card" tabindex="0" data-reveal data-glow>
@@ -243,7 +259,11 @@
                 <span class="tag python">Python</span>
                 <span class="tag bash">Bash</span>
               </div>
-              <p>Production scripts for Ubuntu server automation, rotation and monitoring.</p>
+              <p>Linux automation toolkit for scheduled backups, retention policies, health checks, and operational monitoring on Ubuntu servers.</p>
+              <div class="project-links">
+                <a href="mailto:vishalthombare383@gmail.com?subject=DevOps%20Backup%20Automation%20Details" class="link" aria-label="Email Vishal for details about the DevOps Backup Automation project">Details ↗</a>
+                <a href="https://github.com/vishalthombare" target="_blank" rel="noopener noreferrer" class="link secondary" aria-label="Visit Vishal Thombare GitHub profile">Profile ↗</a>
+              </div>
             </div>
           </div>
         </div>
@@ -282,10 +302,9 @@
 
       <article id="contact" aria-labelledby="contact-heading" data-reveal>
         <h3 id="contact-heading">Contact</h3>
-        <!-- <p>Available for frontend (Angular) and full-stack roles. Open to remote or relocation opportunities.</p> -->
-        <p>Available for Angular, NestJS, and full-stack roles. Open to remote and relocation opportunities.</p>
+        <p>Available for Angular, NestJS, and full-stack roles across product, platform, and fintech teams. Open to remote, relocation, and contract conversations.</p>
         <div class="contact-grid">
-          <a href="mailto:vishalthombare383@gmail.com" class="btn primary" aria-label="Send email to Vishal Thombare">Email</a>
+          <a href="mailto:vishalthombare383@gmail.com?subject=Portfolio%20Inquiry" class="btn primary" aria-label="Send email to Vishal Thombare">Email</a>
           <a href="https://www.linkedin.com/in/vishalthombare/" target="_blank" rel="noopener noreferrer" class="btn ghost" aria-label="Visit Vishal Thombare LinkedIn profile">LinkedIn</a>
         </div>
       </article>
