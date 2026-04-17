@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Vishal Thombare | Full-Stack Software Engineer</title>
   <meta name="description" content="Full-Stack Software Engineer portfolio - Vishal Thombare" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Sora:wght@600;700&display=swap" rel="stylesheet" />
+  <script>document.documentElement.classList.add('js');</script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&amp;family=Sora:wght@600;700&amp;display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -37,10 +38,11 @@
       <button id="themeToggleDesktop" class="theme-toggle desktop-only" aria-label="Toggle Dark Mode" aria-pressed="false">🌙</button>
     </nav>
   </header>
+  <div id="navBackdrop" class="nav-backdrop" hidden></div>
 
   <main class="main-grid">
     <!-- Sidebar Profile -->
-    <aside class="profile-panel" aria-label="Profile">
+    <aside class="profile-panel" aria-label="Profile" data-reveal>
       <img src="images/Image.png" alt="Avatar of Vishal Thombare" class="avatar-img" />
       <div class="profile-main">
         <h1>Vishal Thombare</h1>
@@ -62,7 +64,7 @@
           <li><span class="icon">💼</span> <a href="https://linkedin.com/in/vishalthombare/" target="_blank" rel="noopener">LinkedIn</a></li>
           <li><span class="icon">🐙</span> <a href="https://github.com/vishalthombare" target="_blank" rel="noopener">GitHub</a></li>
         </ul>
-        <a href="Vishal_Thombare_CV.pdf" download class="btn download">Download CV</a>
+        <a href="vishal_thombare.pdf" download class="btn download">Download CV</a>
       </section>
       <hr class="divider" />
       <section class="section">
@@ -89,7 +91,7 @@
       <section class="section">
         <h4>Daily Practices</h4>
         <ul class="practice-list">
-          <li>NgRx & RxJS architecture</li>
+          <li>NgRx &amp; RxJS architecture</li>
           <li>Building component libraries</li>
           <li>Automated CI/CD pipelines</li>
           <li>Containerized deployments</li>
@@ -119,30 +121,51 @@
     </aside>
 
     <section class="content-panel">
-      <article class="hero">
-        <h2>Building Secure, Scalable Enterprise Platforms for Banking, Fintech & SaaS</h2>
-        <p>
-          I design and lead the development of enterprise-grade <strong>Angular</strong> applications and backend systems using <strong>Node.js, NestJS, Django REST, and Python (FastAPI)</strong>, with a strong focus on security, scalability, and production reliability.
-        </p>
-        <p>
-          Solutions are containerized using Docker and deployed on Linux-based infrastructure, engineered to meet the demands of high-availability, regulated, and large-scale enterprise environments.
-        </p>
-        <!-- <p>
-          With 5+ years of experience, I've contributed to high-impact projects in <strong>digital payments, banking platforms, and automotive systems</strong>. I'm passionate about writing clean, maintainable code and delivering exceptional user experiences.
-        </p> -->
-        <p>
-          With 5+ years of experience, I’ve contributed to high-impact initiatives across digital payments, core banking platforms, and automotive systems. I’m passionate about building clean, maintainable codebases and delivering reliable, high-quality user experiences in production-critical systems.
-        </p>
+      <article class="hero" data-reveal>
+        <p class="hero-eyebrow">Angular Architecture • Secure Product Delivery • Fintech Systems</p>
+        <h2>Building Secure, Scalable Enterprise Platforms for Banking, Fintech &amp; SaaS</h2>
+        <div class="hero-copy">
+          <p class="hero-lead">
+            I design and lead enterprise-grade <strong>Angular</strong> applications and backend platforms built with <strong>Node.js, NestJS, Django REST, and FastAPI</strong>, with a strong bias toward security, scalability, and production reliability.
+          </p>
+          <p>
+            Solutions are containerized with Docker and deployed on Linux infrastructure to support high-availability, regulated, and large-scale environments where reliability matters as much as speed.
+          </p>
+          <p>
+            Across 6+ years, I’ve shipped systems for digital payments, core banking, and automotive platforms while helping teams move faster without losing engineering discipline.
+          </p>
+        </div>
+        <div class="hero-highlights" aria-label="Key strengths">
+          <div class="hero-stat">
+            <strong>6+</strong>
+            <span>Years delivering production software</span>
+          </div>
+          <div class="hero-stat">
+            <strong>Angular</strong>
+            <span>NgRx architecture, UX polish, component systems</span>
+          </div>
+          <div class="hero-stat">
+            <strong>Fintech</strong>
+            <span>Payments, banking workflows, secure integrations</span>
+          </div>
+        </div>
+        <div class="hero-signals" aria-label="Capabilities">
+          <span>System Design</span>
+          <span>API Platforms</span>
+          <span>CI/CD Delivery</span>
+          <span>Docker &amp; Linux</span>
+          <span>Team Leadership</span>
+        </div>
         <div class="hero-ctas">
           <a href="#projects" class="btn primary">View Projects</a>
-          <a href="#contact" class="btn ghost">Contact Me</a>
+          <a href="vishal_thombare.pdf" download class="btn ghost">Download CV</a>
         </div>
       </article>
 
-      <article id="experience" aria-labelledby="experience-heading">
+      <article id="experience" aria-labelledby="experience-heading" data-reveal>
         <h3 id="experience-heading">Experience</h3>
         <div class="exp-list">
-          <div class="exp-card">
+          <div class="exp-card" data-reveal>
             <div class="exp-role">
               <span class="exp-badge">Senior Software Engineer</span>
               <span class="exp-company">@ Simbiotik Technologies Sdn. Bhd.</span>
@@ -154,7 +177,7 @@
               <li>Drove UI/UX improvements and app enhancements for better client outcomes.</li>
             </ul>
           </div>
-          <div class="exp-card">
+          <div class="exp-card" data-reveal>
             <div class="exp-role">
               <span class="exp-badge">Technical Team Lead</span>
               <span class="exp-company">@ RhythmFlows Solutions Pvt. Ltd.</span>
@@ -166,7 +189,7 @@
               <li>Managed CI/CD, compliance, and customer-centric enhancements across products.</li>
             </ul>
           </div>
-          <div class="exp-card">
+          <div class="exp-card" data-reveal>
             <div class="exp-role">
               <span class="exp-badge">Software Engineer</span>
               <span class="exp-company">@ Modez Tech Ingenious</span>
@@ -180,51 +203,81 @@
         </div>
       </article>
 
-      <article id="projects" aria-labelledby="projects-heading">
+      <article id="projects" aria-labelledby="projects-heading" data-reveal>
         <h3 id="projects-heading">Projects</h3>
         <div class="projects-grid">
-          <div class="project-card" tabindex="0">
+          <div class="project-card" tabindex="0" data-reveal>
             <img src="images/chat-800w.webp" alt="Angular chat app preview" />
             <div>
-              <h4>Real-Time Chat App <span class="tag angular">Angular • NestJS</span></h4>
-              <p>Component-driven Angular chat with socket.io, file uploads, robust UX and performance.</p>
+              <div class="project-kicker">Featured Build</div>
+              <h4>Real-Time Chat App</h4>
+              <div class="project-tags">
+                <span class="tag angular">Angular</span>
+                <span class="tag nestjs">NestJS</span>
+              </div>
+              <p>Component-driven Angular chat with socket.io, file uploads, robust UX, and strong real-time performance.</p>
               <a href="https://github.com/vishalthombare/chatapplications" target="_blank" rel="noopener noreferrer" class="link" aria-label="GitHub repository for Real-Time Chat App">Repo ↗</a>
             </div>
           </div>
-          <div class="project-card" tabindex="0">
+          <div class="project-card" tabindex="0" data-reveal>
             <img src="images/speech-800w.webp" alt="Voice automation demo preview" />
             <div>
-              <h4>Speech Assistant <span class="tag python">Python • Automation</span></h4>
+              <div class="project-kicker">Automation</div>
+              <h4>Speech Assistant</h4>
+              <div class="project-tags">
+                <span class="tag python">Python</span>
+                <span class="tag automation">Automation</span>
+              </div>
               <p>Voice command automation and accessibility integration for productivity.</p>
             </div>
           </div>
-          <div class="project-card" tabindex="0">
+          <div class="project-card" tabindex="0" data-reveal>
             <img src="images/backup-800w.webp" alt="DevOps automation preview" />
             <div>
-              <h4>DevOps Backup Automation <span class="tag python">Python • Bash</span></h4>
+              <div class="project-kicker">Infrastructure</div>
+              <h4>DevOps Backup Automation</h4>
+              <div class="project-tags">
+                <span class="tag python">Python</span>
+                <span class="tag bash">Bash</span>
+              </div>
               <p>Production scripts for Ubuntu server automation, rotation and monitoring.</p>
             </div>
           </div>
         </div>
       </article>
 
-      <article id="tech" aria-labelledby="tech-heading">
-        <h3 id="tech-heading">Technology & Infrastructure</h3>
-        <ul>
-          <li>Frontend: Angular, React, TypeScript, SCSS</li>
-          <li>Backend: NestJS, Django REST, FastAPI, Python</li>
-          <li>Database: PostgreSQL</li>
-          <li>DevOps & Infra: Docker, Jenkins, Kubernetes, Ubuntu VM, Nginx</li>
-          <li>Security & QA: JWT/OAuth2, VAPT-aware development, unit & integration tests</li>
-        </ul>
+      <article id="tech" aria-labelledby="tech-heading" data-reveal>
+        <h3 id="tech-heading">Technology &amp; Infrastructure</h3>
+        <div class="stack-list" aria-label="Technology stack">
+          <div class="stack-row">
+            <span class="stack-label">Frontend</span>
+            <p>Angular, React, TypeScript, SCSS</p>
+          </div>
+          <div class="stack-row">
+            <span class="stack-label">Backend</span>
+            <p>NestJS, Django REST, FastAPI, Python</p>
+          </div>
+          <div class="stack-row">
+            <span class="stack-label">Data</span>
+            <p>PostgreSQL, API integrations, workflow orchestration</p>
+          </div>
+          <div class="stack-row">
+            <span class="stack-label">Delivery</span>
+            <p>Docker, Jenkins, Kubernetes, Ubuntu VM, Nginx</p>
+          </div>
+          <div class="stack-row">
+            <span class="stack-label">Security</span>
+            <p>JWT, OAuth2, VAPT-aware development, unit and integration testing</p>
+          </div>
+        </div>
       </article>
 
-      <article id="education" aria-labelledby="education-heading">
+      <article id="education" aria-labelledby="education-heading" data-reveal>
         <h3 id="education-heading">Education</h3>
         <p>B. Computer Science — Savitribai Phule Pune University (2020)</p>
       </article>
 
-      <article id="contact" aria-labelledby="contact-heading">
+      <article id="contact" aria-labelledby="contact-heading" data-reveal>
         <h3 id="contact-heading">Contact</h3>
         <!-- <p>Available for frontend (Angular) and full-stack roles. Open to remote or relocation opportunities.</p> -->
         <p>Available for Angular, NestJS, and full-stack roles. Open to remote and relocation opportunities.</p>
@@ -245,14 +298,27 @@
     document.addEventListener('DOMContentLoaded', function () {
       const navToggle = document.getElementById('navToggle');
       const navLinks = document.querySelector('.navlinks');
+      const navBackdrop = document.getElementById('navBackdrop');
       const body = document.body;
 
       // There are two theme buttons: one inside drawer for mobile and one desktop-only.
       const themeToggleDesktop = document.getElementById('themeToggleDesktop');
       const themeToggleMobile = document.getElementById('themeToggle');
 
-      // make sure at least one theme toggle exists
-      const toggleBtn = themeToggleMobile || themeToggleDesktop;
+      let navBackdropTimer = null;
+
+      function closeMenu() {
+        navLinks.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+        body.classList.remove('menu-open');
+        if (navBackdrop) {
+          navBackdrop.classList.remove('visible');
+          window.clearTimeout(navBackdropTimer);
+          navBackdropTimer = window.setTimeout(() => {
+            navBackdrop.hidden = true;
+          }, 240);
+        }
+      }
 
       // NAV toggle accessibility + body scroll lock
       navToggle.setAttribute('aria-expanded', 'false');
@@ -262,20 +328,39 @@
 
         if (opened) {
           body.classList.add('menu-open');
+          if (navBackdrop) {
+            window.clearTimeout(navBackdropTimer);
+            navBackdrop.hidden = false;
+            requestAnimationFrame(() => navBackdrop.classList.add('visible'));
+          }
         } else {
-          body.classList.remove('menu-open');
+          closeMenu();
         }
       });
+
+      if (navBackdrop) {
+        navBackdrop.addEventListener('click', closeMenu);
+      }
 
       // close menu when any nav link clicked (mobile)
       navLinks.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => {
           if (window.innerWidth < 880) {
-            navLinks.classList.remove('open');
-            navToggle.setAttribute('aria-expanded', 'false');
-            body.classList.remove('menu-open');
+            closeMenu();
           }
         });
+      });
+
+      document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape' && navLinks.classList.contains('open')) {
+          closeMenu();
+        }
+      });
+
+      window.addEventListener('resize', function () {
+        if (window.innerWidth >= 880 && navLinks.classList.contains('open')) {
+          closeMenu();
+        }
       });
 
       // Theme logic (persisted)
@@ -316,6 +401,30 @@
           const isDark = document.body.classList.contains('dark-mode');
           applyTheme(isDark ? 'light' : 'dark');
         });
+      }
+
+      const revealItems = document.querySelectorAll('[data-reveal]');
+      const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      if (!reducedMotion && 'IntersectionObserver' in window) {
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, {
+          threshold: 0.18,
+          rootMargin: '0px 0px -40px 0px'
+        });
+
+        revealItems.forEach((item, index) => {
+          item.style.setProperty('--reveal-delay', `${Math.min(index * 70, 420)}ms`);
+          revealObserver.observe(item);
+        });
+      } else {
+        revealItems.forEach((item) => item.classList.add('is-visible'));
       }
 
       // year
