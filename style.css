@@ -759,3 +759,14 @@ h3 {
     transition:none!important;
   }
 }
+
+.project-features {
+  margin: 0 0 18px;
+  padding-left: 17px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.project-features li {
+  margin-bottom: 5px;
+}
